@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunyang Li - Computer Vision Researcher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <canvas id="particles-canvas"></canvas>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">KunyangLi</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </a>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="glitch-wrapper">
+                        <h1 class="name glitch" data-text="Kunyang Li">Kunyang Li</h1>
+                    </div>
+                    <div class="typing-container">
+                        <p class="title">
+                            <span class="typing-text">Third-year Ph.D. Student in Computer Vision</span>
+                            <span class="cursor">|</span>
+                        </p>
+                    </div>
+                    <p class="affiliation">
+                        <i class="fas fa-university"></i> University of Central Florida, IAI | CRCV & Excel-Lab
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag-glow">Scalable Video Generation</span>
+                        <span class="tag-glow">AI Efficiency</span>
+                        <span class="tag-glow">Dataset Distillation</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="mailto:kunyang.li@ucf.edu" class="social-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=NcqZtt8AAAAJ&hl=en" target="_blank" class="social-icon" title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kunyang-li-785259260/" target="_blank" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-frame">
+                        <div class="image-border"></div>
+                        <img src="assets/images/profile.jpg" alt="Kunyang Li">
+                        <div class="image-glow"></div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="float-icon" style="--delay: 0s; --x: -20px; --y: -30px;">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="float-icon" style="--delay: 1s; --x: 30px; --y: -40px;">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="float-icon" style="--delay: 2s; --x: -30px; --y: 40px;">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>Scroll Down</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-reveal">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                About Me
+                <div class="title-line"></div>
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="fade-in">
+                        I am <span class="highlight">Kunyang Li</span>, a Ph.D. student at the
+                        <span class="highlight">University of Central Florida (UCF)</span>
+                        <img src="assets/UCF_processed.png" alt="UCF" class="school-logo">,
+                        jointly affiliated with the Institute of Artificial Intelligence (IAI) and the
+                        Center for Research in Computer Vision (CRCV), where I am advised by
+                        <a href="https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en" target="_blank" class="advisor-link">Dr. Mubarak Shah</a> and
+                        <a href="https://42shawn.github.io/" target="_blank" class="advisor-link">Dr. Yuzhang Shang</a>.
+                    </p>
+                    <p class="fade-in">
+                        My research interests lie in <span class="highlight">efficient video generation</span>,
+                        <span class="highlight">video dataset distillation</span>,
+                        <span class="highlight">personalized video generation</span>, and
+                        <span class="highlight">video continual learning</span>, with a particular focus on
+                        improving training efficiency and long-horizon generation in autoregressive and
+                        diffusion-based video models.
+                    </p>
+                    <p class="fade-in">
+                        Previously, I received my B.S. degree from the
+                        <strong>University of Electronic Science and Technology of China (UESTC)</strong>
+                        <img src="assets/UESTC_processed.png" alt="UESTC" class="school-logo">
+                        and my M.S. degree from
+                        <span class="nowrap"><strong>Nanyang Technological University (NTU)</strong>
+                        <img src="assets/NTU_processed.png" alt="NTU" class="school-logo school-logo-lg"></span>.
+                    </p>
+                </div>
+                <!-- Video Generation Animation - Video Frame Style -->
+                <div class="about-animation">
+                    <div class="video-gen-demo">
+                        <div class="animation-title">Scalable & Efficient</div>
+
+                        <!-- Slow Generation (Top) -->
+                        <div class="gen-row slow-gen">
+                            <div class="gen-label">
+                                <i class="fas fa-hourglass-half"></i>
+                                <span>Baseline</span>
+                            </div>
+                            <div class="video-filmstrip slow-frames">
+                                <div class="film-frame ff-1">
+                                    <div class="frame-img"></div>
+                                    <div class="frame-number">F1</div>
+                                </div>
+                                <div class="film-frame ff-2">
+                                    <div class="frame-img"></div>
+                                    <div class="frame-number">F2</div>
+                                </div>
+                                <div class="film-frame ff-3">
+                                    <div class="frame-img"></div>
+                                    <div class="frame-number">F3</div>
+                                </div>
+                                <div class="film-frame ff-4">
+                                    <div class="frame-img"></div>
+                                    <div class="frame-number">F4</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Divider with Acceleration Symbol -->
+                        <div class="speed-divider">
+                            <div class="divider-line"></div>
+                            <div class="speed-boost">
+                                <i class="fas fa-forward"></i>
+                                <span>×</span>
+                            </div>
+                            <div class="divider-line"></div>
+                        </div>
+
+                        <!-- Fast Generation (Bottom) -->
+                        <div class="gen-row fast-gen">
+                            <div class="gen-label fast-label">
+                                <i class="fas fa-bolt"></i>
+                                <span>Ours</span>
+                            </div>
+                            <div class="video-filmstrip fast-frames">
+                                <div class="film-frame ff-fast-1">
+                                    <div class="frame-img"></div>
+                                    <div class="frame-number">F1</div>
+                                </div>
+                                <div class="film-frame ff-fast-2">
+                                    <div class="frame-img"></div>
+                                    <div class="frame-number">F2</div>
+                                </div>
+                                <div class="film-frame ff-fast-3">
+                                    <div class="frame-img"></div>
+                                    <div class="frame-number">F3</div>
+                                </div>
+                                <div class="film-frame ff-fast-4">
+                                    <div class="frame-img"></div>
+                                    <div class="frame-number">F4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Focus (Projects) -->
+    <section id="research" class="projects section-reveal">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                Research Focus
+                <div class="title-line"></div>
+            </h2>
+            <div class="projects-showcase">
+                <!-- Project 1 - PackCache -->
+                <div class="project-featured">
+                    <div class="project-visual">
+                        <div class="video-container">
+                            <video class="project-video" loop muted playsinline preload="metadata">
+                                <source src="assets/videos/packcache-demo-h264.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-overlay">
+                                <button class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="video-controls">
+                                <div class="progress-bar">
+                                    <div class="progress-filled"></div>
+                                </div>
+                                <span class="video-time">0:00 / 0:00</span>
+                            </div>
+                        </div>
+                        <div class="video-caption">
+                            <p><i class="fas fa-quote-left"></i> The video begins with a wide shot of a blue fishing boat gently navigating through the ocean, accompanied by a larger cruise ship in the background. The ocean is calm and clear, with a few small waves rolling gently. The fishing boat is moving slowly, following the trajectory of the cruise ship. The camera captures the details of the boat's design, including its sleek lines and the bright blue color. The surrounding environment is filled with the sounds of waves crashing against the boat and the gentle hum of the engines. The scene conveys a peaceful and serene atmosphere typical of a relaxing day at sea. <i class="fas fa-quote-right"></i></p>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-label">Featured Project</div>
+                        <h3 class="project-title">PackCache</h3>
+                        <div class="project-description">
+                            <p>
+                                A training-free KV-cache management method for unified autoregressive video generation
+                                which dynamically compacts the KV cache through three coordinated mechanisms:
+                                condition anchoring, cross-frame decay modeling, and spatially preserving position embedding.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> 1.7–2.2× end-to-end acceleration on 48-frame sequences</li>
+                                <li><i class="fas fa-check"></i> 20× extension in video generation length over baseline</li>
+                                <li><i class="fas fa-check"></i> Training-free with dynamic KV cache compaction</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Autoregressive</span>
+                            <span class="tech-tag">KV-Cache</span>
+                            <span class="tech-tag">Video Gen</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="#" class="btn btn-primary btn-disabled">
+                                <i class="fab fa-github"></i> Code Coming Soon
+                            </a>
+                            <a href="#" class="btn btn-secondary btn-disabled">
+                                <i class="fas fa-external-link-alt"></i> Demo Coming Soon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="projects-grid">
+                    <div class="project-card card-hover">
+                        <div class="card-glow"></div>
+                        <div class="project-image">
+                            <img src="assets/projects/project_GVD.png" alt="GVD: Guiding Video Diffusion">
+                            <div class="project-overlay-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4>Video Dataset Distillation</h4>
+                            <p>
+                                We propose GVD: Guiding Video Diffusion, the first diffusion-based video distillation method.
+                                Achieves 78.29% of original dataset's performance using only 1.98% of frames in MiniUCF,
+                                and 73.83% with just 3.30% of frames in HMDB51.
+                            </p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-code"></i> Python</span>
+                                <span><i class="fas fa-star"></i></span>
+                            </div>
+                            <a href="https://arxiv.org/pdf/2507.22360" target="_blank" class="project-link-btn">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card card-hover">
+                        <div class="card-glow"></div>
+                        <div class="project-image">
+                            <img src="assets/projects/project_PackCache.png" alt="PackCache: Video Generation Acceleration">
+                            <div class="project-overlay-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4>Video Generation Acceleration</h4>
+                            <p>
+                                We introduce PackCache, a training-free KV-cache management method which dynamically compacts the KV cache.
+                                Achieves 1.7–2.2× acceleration on 48-frame sequences, with 2.6× on A40 and 3.7× on H200 for the final frames.
+                            </p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-code"></i> PyTorch</span>
+                                <span><i class="fas fa-star"></i></span>
+                            </div>
+                            <a href="https://arxiv.org/pdf/2601.04359" target="_blank" class="project-link-btn">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card card-hover">
+                        <div class="card-glow"></div>
+                        <div class="project-image">
+                            <img src="assets/projects/project_PVG.png" alt="Personalized Video Generation Survey">
+                            <div class="project-overlay-icon">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4>Personalized Video Generation</h4>
+                            <p>
+                                A comprehensive survey on PVG models (Sora 2, Veo 3.1). Covers VGF backbones, identity-preserving pipelines,
+                                open-domain & human-domain tasks, and real-world applications in e-commerce and gaming.
+                            </p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-book"></i> Survey</span>
+                                <span><i class="fas fa-star"></i> 62</span>
+                            </div>
+                            <a href="https://github.com/inFaaa/Awesome-Personalized-Video-Creation/tree/main" target="_blank" class="project-link-btn">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications section-reveal">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                Publications
+                <div class="title-line"></div>
+            </h2>
+            <div class="publications-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="conference">Conference</button>
+                <button class="filter-btn" data-filter="journal">Journal</button>
+                <button class="filter-btn" data-filter="preprint">Preprint</button>
+            </div>
+            <div class="publications-list">
+                <div class="publication-item" data-category="preprint">
+                    <div class="pub-indicator"></div>
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache</h3>
+                        <p class="pub-authors">
+                            <strong>Kunyang Li</strong>, Mubarak Shah, Yuzhang Shang
+                        </p>
+                        <p class="pub-venue">
+                            <span class="venue-badge venue-preprint">arXiv 2025</span>
+                        </p>
+                        <p class="pub-description">
+                            A training-free KV-cache management method that dynamically compacts cache through condition anchoring,
+                            cross-frame decay modeling, and position embedding preservation. Achieves 1.7-2.2× acceleration on 48-frame sequences.
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/pdf/2601.04359" target="_blank" class="pub-link">
+                                <i class="fas fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="#" class="pub-link pub-link-disabled">
+                                <i class="fab fa-github"></i> Code (Coming Soon)
+                            </a>
+                            <a href="#" class="pub-link pub-link-disabled">
+                                <i class="fas fa-play-circle"></i> Demo (Coming Soon)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item" data-category="preprint">
+                    <div class="pub-indicator"></div>
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">GVD: Guiding Video Diffusion Model for Scalable Video Distillation</h3>
+                        <p class="pub-authors">
+                            <strong>Kunyang Li</strong>, Jeffrey A Chan Santiago, Sarinda Dhanesh Samarasinghe, Gaowen Liu, Mubarak Shah
+                        </p>
+                        <p class="pub-venue">
+                            <span class="venue-badge venue-preprint">arXiv 2024</span>
+                        </p>
+                        <p class="pub-description">
+                            The first diffusion-based video distillation method. Achieves 78.29% of original dataset's performance
+                            using only 1.98% of frames in MiniUCF, and 73.83% with 3.30% of frames in HMDB51.
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/pdf/2507.22360" target="_blank" class="pub-link">
+                                <i class="fas fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="#" class="pub-link pub-link-disabled">
+                                <i class="fab fa-github"></i> Code (Coming Soon)
+                            </a>
+                            <a href="#" class="pub-link pub-link-disabled">
+                                <i class="fas fa-play-circle"></i> Demo (Coming Soon)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-reveal">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                Get In Touch
+                <div class="title-line"></div>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p>
+                        I'm always interested in discussing research collaborations, academic
+                        opportunities, or exciting projects in computer vision and AI. Feel free
+                        to reach out!
+                    </p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <a href="mailto:kunyang.li@ucf.edu">kunyang.li@ucf.edu</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Location</h4>
+                        <p>Center for Research in Computer Vision<br>University of Central Florida</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>Office Hours</h4>
+                        <p>By Appointment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Kunyang Li. Designed with passion for AI and creativity.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Back to Top <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
