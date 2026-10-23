@@ -262,10 +262,11 @@ body {
 }
 
 .tag-glow {
-    padding: 0.4rem 1rem;
-    background: transparent;
-    border: 1px solid var(--hairline-gold);
-    border-radius: 2px;
+    position: relative;
+    padding: 0.5rem 1.2rem;
+    background: var(--bg-primary);
+    border: 1.2px solid var(--hairline-gold);
+    border-radius: 14px;
     font-size: 0.8rem;
     letter-spacing: 0.3px;
     color: var(--text-secondary);
@@ -278,43 +279,86 @@ body {
     color: var(--red);
 }
 
+.tag-glow:hover .bump {
+    border-color: var(--gold);
+}
+
+.tag-glow .bump {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 1.2px solid var(--hairline-gold);
+    transition: var(--transition-fast);
+}
+
 .social-links {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: 1.8rem;
     margin-top: var(--spacing-md);
 }
 
 .social-icon {
+    position: relative;
     width: 42px;
     height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--gold);
-    border-radius: 50%;
     color: var(--gold);
     text-decoration: none;
     transition: var(--transition-fast);
+    overflow: visible;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='26' cy='22' r='11' fill='none' stroke='%23B8914A' stroke-width='2.4'/%3E%3Ccircle cx='74' cy='22' r='11' fill='none' stroke='%23B8914A' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='62' r='9' fill='none' stroke='%23B8914A' stroke-width='2.2'/%3E%3Ccircle cx='84' cy='62' r='9' fill='none' stroke='%23B8914A' stroke-width='2.2'/%3E%3Ccircle cx='50' cy='50' r='32' fill='none' stroke='%23B8914A' stroke-width='2.6'/%3E%3Cpath d='M28,38 C36,32 44,32 50,36 C56,32 64,32 72,38' fill='none' stroke='%23B8914A' stroke-width='2'/%3E%3Ccircle cx='37' cy='44' r='4' fill='none' stroke='%23B8914A' stroke-width='2'/%3E%3Ccircle cx='63' cy='44' r='4' fill='none' stroke='%23B8914A' stroke-width='2'/%3E%3C/svg%3E");
+    pointer-events: none;
+    transition: var(--transition-fast);
+}
+
+.social-icon i {
+    position: relative;
+    z-index: 1;
 }
 
 .social-icon:hover {
-    background: var(--red);
-    border-color: var(--red);
+    color: var(--red);
+}
+
+.social-icon:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='26' cy='22' r='11' fill='none' stroke='%237A1F2B' stroke-width='2.4'/%3E%3Ccircle cx='74' cy='22' r='11' fill='none' stroke='%237A1F2B' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='62' r='9' fill='none' stroke='%237A1F2B' stroke-width='2.2'/%3E%3Ccircle cx='84' cy='62' r='9' fill='none' stroke='%237A1F2B' stroke-width='2.2'/%3E%3Ccircle cx='50' cy='50' r='32' fill='none' stroke='%237A1F2B' stroke-width='2.6'/%3E%3Cpath d='M28,38 C36,32 44,32 50,36 C56,32 64,32 72,38' fill='none' stroke='%237A1F2B' stroke-width='2'/%3E%3Ccircle cx='37' cy='44' r='4' fill='none' stroke='%237A1F2B' stroke-width='2'/%3E%3Ccircle cx='63' cy='44' r='4' fill='none' stroke='%237A1F2B' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+.social-icon .cv-tag {
+    position: absolute;
+    bottom: -2px;
+    right: -8px;
+    background: var(--gold);
     color: var(--bg-primary);
-}
-
-.social-icon.cv-badge {
-    width: auto;
-    padding: 0 1rem;
-    border-radius: 21px;
-    gap: 0.4rem;
-}
-
-.social-icon.cv-badge .cv-label {
     font-family: var(--font-display);
+    font-size: 0.6rem;
     font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
+    padding: 1px 5px;
+    border-radius: 7px;
+    z-index: 2;
+    transition: var(--transition-fast);
+}
+
+.social-icon:hover .cv-tag {
+    background: var(--red);
 }
 
 /* Hero Image */
