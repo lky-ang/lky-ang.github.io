@@ -256,27 +256,25 @@ body {
 
 .research-tags {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.6rem;
     margin: var(--spacing-md) 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .tag-glow {
     position: relative;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    width: 192px;
-    height: 64px;
-    padding: 0 2.1rem;
+    white-space: nowrap;
+    height: 54px;
+    padding: 0 1.6rem;
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -5 240 85'%3E%3Cpath d='M30,62 C14,62 6,50 14,40 C4,36 4,22 18,18 C16,6 30,0 42,6 C48,-2 62,-2 68,6 C76,0 90,2 92,12 C106,8 120,14 118,26 C132,26 138,40 126,48 C134,56 128,68 114,66 C112,74 100,78 90,72 C84,78 72,78 66,72 C56,78 44,76 42,68 C34,72 24,70 24,62 Z' fill='none' stroke='%23B8914A' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/svg%3E");
-    font-size: 0.74rem;
-    letter-spacing: 0.2px;
-    line-height: 1.25;
+    font-size: 0.66rem;
+    letter-spacing: 0.1px;
     color: var(--text-secondary);
     transition: var(--transition-fast);
     cursor: default;
@@ -460,9 +458,33 @@ section {
 }
 
 /* ===== About Section ===== */
+.about {
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 700px;
+    max-width: 55%;
+    height: 420px;
+    max-height: 80%;
+    transform: translateY(-50%);
+    background-image: url("assets/images/about-painting-bg.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+}
+
 .about-content {
+    position: relative;
+    z-index: 1;
     display: block;
-    overflow: auto;
 }
 
 .about-text {
@@ -473,36 +495,6 @@ section {
     margin-bottom: var(--spacing-sm);
     color: var(--text-secondary);
     line-height: 1.9;
-}
-
-.about-painting {
-    position: relative;
-    float: right;
-    width: 320px;
-    max-width: 40%;
-    margin: var(--spacing-sm) 0 var(--spacing-md) var(--spacing-lg);
-    padding: 8px;
-    border: 1px solid var(--gold);
-}
-
-.about-painting img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.about-painting .frame-corner {
-    width: 20px;
-    height: 20px;
-}
-
-.about-painting figcaption {
-    margin-top: 6px;
-    text-align: center;
-    font-size: 0.72rem;
-    font-style: italic;
-    color: var(--text-muted);
-    letter-spacing: 0.2px;
 }
 
 .highlight {
