@@ -4,24 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kunyang Li - Computer Vision Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-background">
-        <canvas id="particles-canvas"></canvas>
-        <div class="gradient-overlay"></div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="#home" class="logo">
-                    <span class="logo-bracket">&lt;</span>
-                    <span class="logo-text">KunyangLi</span>
-                    <span class="logo-bracket">/&gt;</span>
+                    <span class="logo-seal">KL</span>
+                    <span class="logo-text">Kunyang Li</span>
                 </a>
                 <button class="nav-toggle" id="navToggle">
                     <span></span>
@@ -33,6 +29,7 @@
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#research" class="nav-link">Research</a></li>
                     <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="assets/resume/Kunyang_Li_Resume.pdf" target="_blank" class="nav-link">Resume</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
@@ -44,13 +41,10 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="glitch-wrapper">
-                        <h1 class="name glitch" data-text="Kunyang Li">Kunyang Li</h1>
-                    </div>
+                    <h1 class="name">Kunyang Li</h1>
                     <div class="typing-container">
                         <p class="title">
                             <span class="typing-text">Third-year Ph.D. Student in Computer Vision</span>
-                            <span class="cursor">|</span>
                         </p>
                     </div>
                     <p class="affiliation">
@@ -71,24 +65,18 @@
                         <a href="https://www.linkedin.com/in/kunyang-li-785259260/" target="_blank" class="social-icon" title="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
+                        <a href="assets/resume/Kunyang_Li_Resume.pdf" target="_blank" class="social-icon" title="Resume">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="image-frame">
-                        <div class="image-border"></div>
+                        <span class="frame-corner corner-tl"></span>
+                        <span class="frame-corner corner-tr"></span>
+                        <span class="frame-corner corner-bl"></span>
+                        <span class="frame-corner corner-br"></span>
                         <img src="assets/images/profile.jpg" alt="Kunyang Li">
-                        <div class="image-glow"></div>
-                    </div>
-                    <div class="floating-elements">
-                        <div class="float-icon" style="--delay: 0s; --x: -20px; --y: -30px;">
-                            <i class="fas fa-film"></i>
-                        </div>
-                        <div class="float-icon" style="--delay: 1s; --x: 30px; --y: -40px;">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div class="float-icon" style="--delay: 2s; --x: -30px; --y: 40px;">
-                            <i class="fas fa-microchip"></i>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -134,74 +122,6 @@
                         <span class="nowrap"><strong>Nanyang Technological University (NTU)</strong>
                         <img src="assets/NTU_processed.png" alt="NTU" class="school-logo school-logo-lg"></span>.
                     </p>
-                </div>
-                <!-- Video Generation Animation - Video Frame Style -->
-                <div class="about-animation">
-                    <div class="video-gen-demo">
-                        <div class="animation-title">Scalable & Efficient</div>
-
-                        <!-- Slow Generation (Top) -->
-                        <div class="gen-row slow-gen">
-                            <div class="gen-label">
-                                <i class="fas fa-hourglass-half"></i>
-                                <span>Baseline</span>
-                            </div>
-                            <div class="video-filmstrip slow-frames">
-                                <div class="film-frame ff-1">
-                                    <div class="frame-img"></div>
-                                    <div class="frame-number">F1</div>
-                                </div>
-                                <div class="film-frame ff-2">
-                                    <div class="frame-img"></div>
-                                    <div class="frame-number">F2</div>
-                                </div>
-                                <div class="film-frame ff-3">
-                                    <div class="frame-img"></div>
-                                    <div class="frame-number">F3</div>
-                                </div>
-                                <div class="film-frame ff-4">
-                                    <div class="frame-img"></div>
-                                    <div class="frame-number">F4</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Divider with Acceleration Symbol -->
-                        <div class="speed-divider">
-                            <div class="divider-line"></div>
-                            <div class="speed-boost">
-                                <i class="fas fa-forward"></i>
-                                <span>×</span>
-                            </div>
-                            <div class="divider-line"></div>
-                        </div>
-
-                        <!-- Fast Generation (Bottom) -->
-                        <div class="gen-row fast-gen">
-                            <div class="gen-label fast-label">
-                                <i class="fas fa-bolt"></i>
-                                <span>Ours</span>
-                            </div>
-                            <div class="video-filmstrip fast-frames">
-                                <div class="film-frame ff-fast-1">
-                                    <div class="frame-img"></div>
-                                    <div class="frame-number">F1</div>
-                                </div>
-                                <div class="film-frame ff-fast-2">
-                                    <div class="frame-img"></div>
-                                    <div class="frame-number">F2</div>
-                                </div>
-                                <div class="film-frame ff-fast-3">
-                                    <div class="frame-img"></div>
-                                    <div class="frame-number">F3</div>
-                                </div>
-                                <div class="film-frame ff-fast-4">
-                                    <div class="frame-img"></div>
-                                    <div class="frame-number">F4</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -274,7 +194,6 @@
                 <!-- Project Grid -->
                 <div class="projects-grid">
                     <div class="project-card card-hover">
-                        <div class="card-glow"></div>
                         <div class="project-image">
                             <img src="assets/projects/project_GVD.png" alt="GVD: Guiding Video Diffusion">
                             <div class="project-overlay-icon">
@@ -299,7 +218,6 @@
                     </div>
 
                     <div class="project-card card-hover">
-                        <div class="card-glow"></div>
                         <div class="project-image">
                             <img src="assets/projects/project_PackCache.png" alt="PackCache: Video Generation Acceleration">
                             <div class="project-overlay-icon">
@@ -323,7 +241,6 @@
                     </div>
 
                     <div class="project-card card-hover">
-                        <div class="card-glow"></div>
                         <div class="project-image">
                             <img src="assets/projects/project_PVG.png" alt="Personalized Video Generation Survey">
                             <div class="project-overlay-icon">
